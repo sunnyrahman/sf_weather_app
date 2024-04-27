@@ -2,6 +2,29 @@ import 'package:flutter/material.dart';
 
 import 'dimensions.dart';
 
+final inter = TextStyle(
+  fontFamily: 'Inter',
+  fontWeight: FontWeight.w700,
+  // fontSize: Dimensions.fontSizeDefault,
+);
+
+final circular = TextStyle(
+  fontFamily: 'Circular',
+  fontWeight: FontWeight.w300,
+  // fontSize: Dimensions.fontSizeDefault,
+);
+
+
+
+
+
+
+
+
+
+
+
+
 final robotoRegular = TextStyle(
   fontFamily: 'KohinoorBangla',
   fontWeight: FontWeight.w400,

@@ -1,19 +1,34 @@
 class Images {
   /// Sunny
-  static const String stitbd = 'assets/image/stitbd.png';
+
+  static const String locationIcon = 'assets/icon/location.png';
+
+
+  static const String partlyCloudy = 'assets/image/partly_cloudy.png';
+  static const String partlyCloudy2 = 'assets/image/partly_cloudy2.png';
+  static const String partlyCloudy3 = 'assets/image/partly_cloudy3.png';
+  static const String partlyCloudy4 = 'assets/image/partly_cloudy4.png';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   static const String logo = 'assets/image/logo.png';
   static const String error = 'assets/icon/error.png';
   static const String result_not_found = 'assets/image/no-results.png';
   static const String home = 'assets/icon/home.png';
   static const String call = 'assets/icon/call.png';
-  static const String about = 'assets/icon/info.png';
-  static const String eye = 'assets/icon/eye.png';
-  static const String inovator = 'assets/icon/innovation.png';
-  static const String dedicate = 'assets/icon/dedicated.png';
-  static const String developer = 'assets/icon/developer.png';
-  static const String association = 'assets/icon/unity.png';
-  static const String link = 'assets/icon/link.png';
-  static const String share = 'assets/icon/share.png';
   static const String rate = 'assets/icon/rateus.png';
   static const String logout = 'assets/icon/logout.png';
   static const String bd = 'assets/icon/bd.png';
