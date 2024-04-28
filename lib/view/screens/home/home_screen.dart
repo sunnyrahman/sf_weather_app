@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sf_weather_app/view/base/custom_button.dart';
 import '../../../util/images.dart';
 import '../../../util/styles.dart';
@@ -28,8 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
           onRefresh: () async{
           },
           child: Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
+            // height: MediaQuery.of(context).size.height,
+            // width: MediaQuery.of(context).size.width,
             // Below is the code for Linear Gradient.
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -92,7 +93,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   SizedBox(height: 15,),
                    Expanded(
-                                        child: ListView.builder(
+                     child: ListView.builder(
                                           shrinkWrap: true,
                                             itemCount: 6,
                                             // itemCount: controller.wf!.length,
@@ -111,27 +112,28 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             begin: Alignment.topCenter,
                                                             end: Alignment.bottomCenter,
                                                             colors: [
-                                                              // Color(0xff0DABCE),
-                                                              Colors.greenAccent.shade100,
-                                                              Colors.grey.shade300,
+                                                              Color(0xffA4B4EC),
+                                                              Color(0xff6E86D9),
                                                             ],
                                                           ),
                                                           // color: Colors.grey[300],
-                                                          borderRadius: BorderRadius.only(
-                                                            topLeft: Radius.circular(32),
-                                                            topRight: Radius.circular(32),
+                                                          borderRadius: BorderRadius.all(
+                                                            Radius.circular(100)
+                                                            // topLeft: Radius.circular(32),
+                                                            // topRight: Radius.circular(32),
                                                           ),
                                                         ),
-                                                        height: 100,
-                                                        width: 55,
+                                                        height: 139,
+                                                        width: 66,
                                                         child: Column(
                                                           children: [
-                                                            SizedBox(height: 10),
-                                                            Image.asset(Images.partlyCloudy2, height: 32,width: 32,),
+                                                            SizedBox(height: 16),
+                                                            Text("Now", textAlign: TextAlign.center, style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 16, fontWeight: FontWeight.w400),),
                                                             SizedBox(height: 8),
-                                                            Image.asset(Images.partlyCloudy3, height: 32,width: 32,),
-                                                            SizedBox(height: 5),
-                                                            Image.asset(Images.partlyCloudy4, height: 32,width: 32,),                                                          ],
+                                                            Image.asset(Images.partlyCloudy4, height: 48,width: 50,),
+                                                            SizedBox(height: 10),
+                                                            Text("13°", textAlign: TextAlign.center, style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 18, fontWeight: FontWeight.w400),),
+                                                          ],
                                                         ),
                                                       ),
                                                     ),
@@ -183,6 +185,145 @@ class _HomeScreenState extends State<HomeScreen> {
                                         //   ),
                                         // ),
                                       ),
+                  SizedBox(height: 20),
+                  Container(
+                    height: Get.height,
+                    width: Get.width,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Color(0xff94A5DE),
+                          Color(0xff22429F),
+                        ],
+                      ),
+                      // color: Colors.grey[300],
+                      borderRadius: BorderRadius.all(
+                          Radius.circular(100)
+                        // topLeft: Radius.circular(32),
+                        // topRight: Radius.circular(32),
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 50),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40, right: 40),
+                          child: Container(
+                            height: 88,
+                            width: Get.width,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xffA4B4EC),
+                                  Color(0xff6E86D9),
+                                ],
+                              ),
+                              // color: Colors.grey[300],
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(16)
+                                // topLeft: Radius.circular(32),
+                                // topRight: Radius.circular(32),
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Image.asset(Images.sunfog, height: 56,width: 56,)),
+                                SizedBox(width: 10,),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(height: 15),
+                                      Text("Sunset", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 16, fontWeight: FontWeight.w400),),
+                                      SizedBox(height: 4),
+                                      Text("5:51PM", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 24, fontWeight: FontWeight.w500),),
+                                    ],
+                                  ),
+                                ),
+                                // SizedBox(width: 10,),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(height: 15),
+                                      Text("Sunrise", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 16, fontWeight: FontWeight.w400),),
+                                      SizedBox(height: 4),
+                                      Text("7:00AM", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 24, fontWeight: FontWeight.w500),),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 40, right: 40),
+                          child: Container(
+                            height: 88,
+                            width: Get.width,
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.centerLeft,
+                                end: Alignment.centerRight,
+                                colors: [
+                                  Color(0xffA4B4EC),
+                                  Color(0xff6E86D9),
+                                ],
+                              ),
+                              // color: Colors.grey[300],
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(16)
+                                // topLeft: Radius.circular(32),
+                                // topRight: Radius.circular(32),
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                    flex: 1,
+                                    child: Image.asset(Images.sun, height: 56,width: 56,)),
+                                SizedBox(width: 10,),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(height: 15),
+                                      Text("Sunset", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 16, fontWeight: FontWeight.w400),),
+                                      SizedBox(height: 4),
+                                      Text("5:51PM", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 24, fontWeight: FontWeight.w500),),
+                                    ],
+                                  ),
+                                ),
+                                // SizedBox(width: 10,),
+                                Expanded(
+                                  flex: 2,
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(height: 15),
+                                      Text("Sunrise", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 16, fontWeight: FontWeight.w400),),
+                                      SizedBox(height: 4),
+                                      Text("7:00AM", style: circular.copyWith(color: const Color(0xffFFFFFF),fontSize: 24, fontWeight: FontWeight.w500),),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
                 ]
             ),
           ),

@@ -8,6 +8,8 @@ class Images {
   static const String partlyCloudy2 = 'assets/image/partly_cloudy2.png';
   static const String partlyCloudy3 = 'assets/image/partly_cloudy3.png';
   static const String partlyCloudy4 = 'assets/image/partly_cloudy4.png';
+  static const String sunfog = 'assets/image/sun_fog.png';
+  static const String sun = 'assets/image/sun.png';
 
 
 
